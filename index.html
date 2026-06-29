@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Ideas — Agent Adventure 🍪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#fef6fb; --text:#5d3a5c; --accent:#f48fb1; --card:#fff0f5; --border:rgba(100,70,120,0.12); --meta:#999; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); min-height:100vh; }
+.container { max-width:800px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+h1 { font-size:2rem; font-weight:800; color:var(--accent); margin-bottom:0.3rem; }
+.subtitle { color:var(--meta); font-size:0.85rem; margin-bottom:1.5rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.2rem; box-shadow:0 2px 10px rgba(100,70,120,0.06); }
+.card h3 { font-size:1.1rem; margin-bottom:0.3rem; }
+.card .owner { color:var(--meta); font-size:0.8rem; margin-bottom:0.5rem; }
+.card .desc { font-size:0.85rem; line-height:1.5; margin-bottom:0.5rem; }
+.card .price { font-weight:700; color:var(--accent); font-size:1rem; }
+.card .tags { display:flex; gap:0.3rem; flex-wrap:wrap; margin-top:0.5rem; }
+.card .tag { font-size:0.65rem; padding:0.15rem 0.4rem; border-radius:8px; background:rgba(244,143,177,0.1); color:var(--meta); }
+#loading { text-align:center; padding:3rem 0; color:var(--meta); }
+.footer { text-align:center; margin-top:2rem; color:var(--meta); font-size:0.75rem; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🍪 Business Ideas</h1>
+  <p class="subtitle">Agent Adventure Summer 2026 — Cerivitas</p>
+  <div id="loading">Memuat ide bisnis...</div>
+  <div class="grid" id="grid"></div>
+  <p class="footer">Dibuat dengan ❤️ oleh peserta Business Coach Workshop</p>
+</div>
+<script>
+const RAW = 'https://raw.githubusercontent.com/sarinursita/cerivitas-businesskids/main/';
+const API = 'https://api.github.com/repos/sarinursita/cerivitas-businesskids/contents/';
+
+async function load() {
+  const resp = await fetch(API);
+  const items = await resp.json();
+  const mdFiles = items.filter(i => i.type==='file' && i.name.endsWith('.md') && i.name!=='README.md');
+
+  const grid = document.getElementById('grid');
+  for (const f of mdFiles) {
+    try {
+      const md = await (await fetch(RAW + f.name)).text();
+      const name = (md.match(/^# (.+)$/m)||[])[1] || f.name.replace('.md','');
+      const owner = (md.match(/\*\*Pemilik:\*\*\s*(.+)/)||[])[1] || '';
+      const product = (md.match(/\*\*Produk:\*\*\s*(.+)/)||[])[1] || '';
+      const price = (md.match(/\*\*Harga:\*\*\s*(.+)/)||[])[1] || '';
+      const target = (md.match(/\*\*Target:\*\*\s*(.+)/)||[])[1] || '';
+      const usp = (md.match(/\*\*USP:\*\*\s*(.+)/)||[])[1] || '';
+      const tags = ((md.match(/\*\*Tags:\*\*\s*(.+)/)||[])[1]||'').split(',').map(s=>s.trim()).filter(Boolean);
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h3>${name}</h3>
+        ${owner ? `<p class="owner">✍️ ${owner}</p>` : ''}
+        ${product ? `<p class="desc">${product}</p>` : ''}
+        ${price ? `<p class="price">💰 ${price}</p>` : ''}
+        ${target ? `<p style="font-size:0.75rem;color:var(--meta)">🎯 ${target}</p>` : ''}
+        ${usp ? `<p style="font-size:0.75rem;color:var(--meta);font-style:italic">✨ ${usp}</p>` : ''}
+        ${tags.length ? `<div class="tags">${tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>` : ''}
+      `;
+      grid.appendChild(card);
+    } catch(e) {}
+  }
+  document.getElementById('loading').style.display = 'none';
+  if (!grid.children.length) grid.innerHTML = '<p style="text-align:center;color:var(--meta)">Belum ada ide bisnis. Ikut Business Coach Workshop dulu! 🍪</p>';
+}
+load();
+</script>
+</body>
+</html>
