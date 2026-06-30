@@ -1,6 +1,6 @@
 # Hey!Logo
 
-**Pemilik:** Sirat Rizhqi
+**Pemilik:** Aqil
 **Produk:** Jasa desain logo custom untuk UMKM — desain elegan & simple
 **Harga:** Rp15.000/logo
 **Target:** UMKM & pemilik usaha kecil yang butuh logo profesional
