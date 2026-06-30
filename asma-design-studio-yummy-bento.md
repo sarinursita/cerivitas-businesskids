@@ -1,7 +1,7 @@
-# Yummy Bento — Stiker Kemasan Frozen Food 🍱
+# Yummy Bento — Desain Stiker Kemasan Frozen Food 🍱
 
 **Pemilik:** Asma' Rahmah — Asma' Design Studio
-**Produk:** Stiker label kemasan frozen food "Yummy Bento" (Chicken Katsu)
+**Produk:** Desain stiker label kemasan frozen food "Yummy Bento" (Chicken Katsu)
 **Harga Jasa:** Mulai Rp1.000+ (jasa desain custom)
 **Target:** Umum — frozen food rumahan / UMKM
 **USP:** Desain original karakter chibi khas Asma' Design Studio, kombinasi warna kuning & merah marun yang ceria
