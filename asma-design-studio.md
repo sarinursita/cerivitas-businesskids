@@ -4,7 +4,7 @@
 **Produk:** Jasa desain custom — poster, undangan, banner, konten canva, logo, stiker, & kebutuhan visual lainnya
 **Harga:** Rp10.000
 **Target:** Umum — siapa aja yang butuh jasa desain
-**USP:** Original design, your ideas, your vibe, your rules. Revisi? gapapa, santai aja ✨
+**USP:** Perpaduan AI + skill desain manual, harga affordable, bisa bikin apa aja dari poster sampai stiker
 **Tools:** Luzie (betterclaw) & Jarvis
 
 ---
