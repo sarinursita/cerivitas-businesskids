@@ -3,7 +3,7 @@
 **Pemilik:** Asma' Rahmah
 **Produk:** Jasa desain custom (logo, template, poster, dll) — hasil original, handmade
 **Harga:** Rp10.000
-**Target:** Umum — semua orang yang butuh desain custom
+**Target:** Masih cari target pasar — sejauh ini mama (poster pengajian) & bude
 **USP:** Desain original, bisa revisi, buatan tangan sendiri
 **Tools:** Luzie (betterclaw) & Jarvis
 
