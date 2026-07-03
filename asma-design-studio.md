@@ -1,7 +1,7 @@
 # Asma' Design Studio 💎
 
 **Pemilik:** Asma' Rahmah
-**Produk:** Jasa desain grafis custom — 13 produk (poster, undangan, banner, desain canva, logo, sticker sheet, stiker jualan, name tag, sampul buku, planner, wallpaper, CV, desain ucapan)
+**Produk:** Jasa desain grafis custom — 17 produk (poster/flyer, undangan, banner, desain canva/ppt, logo, sticker sheet, stiker jualan, name tag, sampul buku, planner, wallpaper, CV, desain ucapan, poster infografis, recipe design, poster edukasi islami, desain promosi)
 **Harga:** Rp3.500 - Rp25.000
 **Target:** Anak sekolah, UMKM, umum
 **USP:** Desain aesthetic harga affordable, dari stiker kecil sampe banner besar, semua bisa!
@@ -26,6 +26,10 @@
 | 🖥 Background/Wallpaper | Rp5.000 |
 | 📄 CV | Rp11.000 |
 | 🎉 Desain Ucapan/Greeting | Rp4.000 |
+| 📊 Poster Infografis | Rp10.000 |
+| 🍳 Recipe Design | Rp8.000 |
+| 📖 Poster Edukasi Islami | Rp8.000 |
+| 🎯 Desain Promosi | Rp10.000 |
 
 ---
 
