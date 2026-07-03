@@ -10,7 +10,7 @@
 
 | Hari | Aktivitas | Status | Keterangan |
 |------|-----------|--------|------------|
-|| **H1** | Bikin Pricelist | ✅ SELESAI | 17 produk, Rp3.500 - Rp25.000 |
+|| **H1** | Bikin Pricelist | ✅ SELESAI | 17 produk, mulai Rp3.500 |
 | **H2** | Siapkan Contoh Desain | ✅ SELESAI | Asma' punya banyak portofolio (Flyer Pengajian, Planner, Stiker, dll) |
 | **H3** | Posting #1 — IG Announce Pricelist | ⏳ PENDING | Caption siap, nunggu review Kak Sari |
 | **H4** | Posting #2 — Stiker/Logo | ⏳ PENDING | Caption siap |
@@ -25,7 +25,7 @@
 ### ✅ H1 — Bikin Pricelist (SELESAI)
 **Aktivitas:** Membuat daftar harga lengkap 17 produk
 **Hasil:**
-- 17 produk dengan rentang harga Rp3.500 - Rp25.000
+- 17 produk, mulai Rp3.500
 - Versi gambar pricelist aesthetic (gradien pink-purple)
 - File: `asma-design-studio.md` (pricelist & caption)
 

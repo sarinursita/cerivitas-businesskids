@@ -2,8 +2,8 @@
 
 **Pemilik:** Asma' Rahmah
 **Produk:** Jasa desain grafis custom — 17 produk (poster/flyer, undangan, banner, desain canva/ppt, logo, sticker sheet, stiker jualan, name tag, sampul buku, planner, wallpaper, CV, desain ucapan, poster infografis, recipe design, poster edukasi islami, desain promosi)
-**Harga:** Rp3.500 - Rp25.000
-**Target:** Anak sekolah, UMKM, umum
+**Harga:** Mulai Rp3.500
+**Target:** Umum
 **USP:** Desain aesthetic harga affordable, dari stiker kecil sampe banner besar, semua bisa!
 **Tools:** Luzie (betterclaw), Canva, Jarvis
 
