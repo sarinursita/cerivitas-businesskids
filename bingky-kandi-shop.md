@@ -8,3 +8,7 @@
 **USP:** Gelang kandi handmade warna-warni, model unik (ladder cuff, bunga, dll)
 **Caption IG:** Mau tampil beda? Bingky Kandi Shop siap bikin gaya kamu makin colorful! 🌈 Dari ladder cuff sampe gelang bunga, semua handmade pake pony beads pilihan. Yuk order! DM aja langsung 📩
 **Tags:** #BingkyKandiShop #KandiBracelet #PonyBeads #GelangHandmade #AksesorisDIY #KandiIndonesia #HandmadeID #LadderCuff
+
+**Product Glow Up:** ✅ Foto konsep Playful & Colorful udah jadi!
+**Lihat hasil:** [Bingky Kandi Shop — Website](https://sarinursita.github.io/cerivitas-websites/bingky-kandi-shop.html)
+**Lihat hasil:** [Bingky Kandi Shop — Gallery Bisnis](https://sarinursita.github.io/cerivitas-businesskids/)
