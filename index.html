@@ -147,6 +147,8 @@ async function load() {
 
       const card = document.createElement('div');
       card.className = 'card';
+      card.style.cursor = 'pointer';
+      card.onclick = function() { window.location.href = prefix + '.html'; };
       card.innerHTML = `
         ${slideshowHtml}
         <div class="card-body">

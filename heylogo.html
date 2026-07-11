@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hey!Logo — Desain Logo UMKM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fef6fb;
+  --text: #5d3a5c;
+  --accent: #f48fb1;
+  --accent2: #c084fc;
+  --card: #fff0f5;
+  --border: rgba(100,70,120,0.12);
+  --meta: #999;
+  --btn: #f48fb1;
+  --btn-hover: #e91e63;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+}
+.container { max-width:780px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+
+/* Nav */
+.nav {
+  display:flex; align-items:center; gap:.5rem;
+  margin-bottom:2rem; font-size:.9rem;
+}
+.nav a {
+  color:var(--meta); text-decoration:none;
+  display:flex; align-items:center; gap:.3rem;
+  transition:color .2s;
+}
+.nav a:hover { color:var(--accent); }
+.nav .sep { color:var(--meta); }
+
+/* Hero */
+.hero {
+  text-align:center;
+  margin-bottom:2.5rem;
+}
+.hero h1 {
+  font-size:2.8rem; font-weight:900;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:.3rem;
+}
+.hero .owner {
+  font-size:1.1rem; color:var(--meta);
+  margin-bottom:.5rem;
+}
+.hero .tagline {
+  font-size:1.1rem; color:var(--text);
+  opacity:.8;
+}
+
+/* Gallery */
+.gallery { margin-bottom:2.5rem; }
+.gallery h2 {
+  font-size:1.3rem; margin-bottom:1rem;
+  color:var(--text);
+}
+.slideshow {
+  position:relative; width:100%;
+  aspect-ratio:1/1;
+  background:#f0e4ee; border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(100,70,120,.1);
+}
+.slideshow img {
+  position:absolute; top:0; left:0;
+  width:100%; height:100%; object-fit:contain;
+  opacity:0; transition:opacity .5s ease-in-out;
+  background:#f0e4ee; padding:1rem;
+}
+.slideshow img.active { opacity:1; }
+.slideshow .nav {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:rgba(100,70,120,.5); color:#fff;
+  border:none; width:36px; height:36px;
+  border-radius:50%; cursor:pointer; font-size:1.2rem;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transition:opacity .3s; z-index:2;
+}
+.slideshow:hover .nav { opacity:1; }
+.slideshow .nav:hover { background:rgba(100,70,120,.8); }
+.slideshow .prev { left:10px; }
+.slideshow .next { right:10px; }
+.slideshow .dots {
+  position:absolute; bottom:12px; left:50%;
+  transform:translateX(-50%); display:flex; gap:6px; z-index:2;
+}
+.slideshow .dot {
+  width:8px; height:8px; border-radius:50%;
+  background:rgba(255,255,255,.5); cursor:pointer;
+  transition:background .3s;
+}
+.slideshow .dot.active { background:#fff; }
+.slideshow .counter {
+  position:absolute; top:12px; right:12px;
+  background:rgba(0,0,0,.5); color:#fff;
+  font-size:.75rem; padding:3px 10px; border-radius:12px; z-index:2;
+}
+
+/* Info Cards */
+.info-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1rem; margin-bottom:2.5rem;
+}
+.info-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:1.2rem;
+}
+.info-card .icon { font-size:1.5rem; margin-bottom:.3rem; }
+.info-card .label { font-size:.8rem; color:var(--meta); margin-bottom:.2rem; }
+.info-card .value { font-size:1.1rem; font-weight:700; color:var(--text); }
+
+/* Description */
+.desc-section {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:1.5rem; margin-bottom:2rem;
+}
+.desc-section h2 {
+  font-size:1.2rem; margin-bottom:.8rem;
+  display:flex; align-items:center; gap:.5rem;
+}
+.desc-section p {
+  font-size:1rem; line-height:1.7; color:var(--text);
+  opacity:.85;
+}
+
+/* USP */
+.usp-section {
+  background:linear-gradient(135deg,#fff0f5,#f3e8ff);
+  border:1px solid var(--border);
+  border-radius:16px; padding:1.5rem; margin-bottom:2.5rem;
+  text-align:center;
+}
+.usp-section h2 {
+  font-size:1.2rem; margin-bottom:.5rem;
+}
+.usp-section p {
+  font-size:1rem; line-height:1.6; color:var(--text);
+  opacity:.8; font-style:italic;
+}
+
+/* Order Button */
+.order-section {
+  text-align:center;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:20px; padding:2rem; margin-bottom:2rem;
+}
+.order-section h2 {
+  font-size:1.4rem; margin-bottom:.5rem;
+}
+.order-section p {
+  color:var(--meta); font-size:.95rem; margin-bottom:1.5rem;
+}
+.order-btn {
+  display:inline-block;
+  background:linear-gradient(135deg,var(--btn),var(--btn-hover));
+  color:#fff; font-weight:700; font-size:1.1rem;
+  padding:1rem 2.5rem; border-radius:50px;
+  text-decoration:none; transition:transform .2s, box-shadow .2s;
+  box-shadow:0 4px 15px rgba(244,143,177,.4);
+}
+.order-btn:hover {
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(244,143,177,.5);
+}
+
+/* Footer */
+.footer {
+  text-align:center; color:var(--meta);
+  font-size:.8rem; margin-top:1rem;
+}
+.footer a { color:var(--accent); text-decoration:none; }
+
+/* Tags */
+.tags-section {
+  margin-bottom:2rem;
+}
+.tags-section h2 {
+  font-size:1.1rem; margin-bottom:.6rem;
+}
+.tags {
+  display:flex; gap:.5rem; flex-wrap:wrap;
+}
+.tag {
+  font-size:.8rem; padding:.3rem .7rem;
+  border-radius:10px;
+  background:rgba(244,143,177,.1);
+  color:var(--meta);
+}
+
+@media(max-width:600px) {
+  .hero h1 { font-size:2rem; }
+  .info-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Back Nav -->
+  <div class="nav">
+    <a href="index.html">← Kembali ke Business Ideas</a>
+    <span class="sep">|</span>
+    <a href="karya.html">💼 Karya</a>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>🎨 Hey!Logo</h1>
+    <p class="owner">✍️ Aqil</p>
+    <p class="tagline">Jasa desain logo custom untuk UMKM — desain elegan & simple</p>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <h2>📸 Portofolio</h2>
+    <div class="slideshow" id="gallery">
+      <img src="images/heylogo-promo-1.png" class="active" data-index="0" alt="Promo 1">
+      <img src="images/heylogo-before-after-1.png" data-index="1" alt="Before After 1">
+      <button class="nav prev" onclick="slidePrev()">‹</button>
+      <button class="nav next" onclick="slideNext()">›</button>
+      <div class="dots">
+        <span class="dot active" onclick="slideTo(0)"></span>
+        <span class="dot" onclick="slideTo(1)"></span>
+      </div>
+      <span class="counter">1/2</span>
+    </div>
+  </div>
+
+  <!-- Info Grid -->
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="icon">💰</div>
+      <div class="label">Harga</div>
+      <div class="value">Rp15.000/logo</div>
+    </div>
+    <div class="info-card">
+      <div class="icon">🎯</div>
+      <div class="label">Target</div>
+      <div class="value">UMKM & pemilik usaha kecil</div>
+    </div>
+  </div>
+
+  <!-- Description -->
+  <div class="desc-section">
+    <h2>📋 Tentang Hey!Logo</h2>
+    <p>Hey!Logo adalah jasa desain logo custom yang dibuat khusus untuk UMKM dan pemilik usaha kecil. Setiap logo didesain dengan gaya elegan dan simple, cocok buat branding usaha kamu yang ingin naik level! Dengan harga yang terjangkau, kamu bisa punya logo profesional tanpa harus keluar biaya besar.</p>
+  </div>
+
+  <!-- USP -->
+  <div class="usp-section">
+    <h2>✨ Kenapa Pilih Hey!Logo?</h2>
+    <p>Desain elegan dan simple • Harga terjangkau untuk UMKM • Cocok buat branding usaha • Desain 100% custom sesuai request</p>
+  </div>
+
+  <!-- Tags -->
+  <div class="tags-section">
+    <h2>🏷️ Tags</h2>
+    <div class="tags">
+      <span class="tag">#desainLogo</span>
+      <span class="tag">#jasaLogo</span>
+      <span class="tag">#UMKM</span>
+      <span class="tag">#HeyLogo</span>
+      <span class="tag">#logoMurah</span>
+      <span class="tag">#brandingMurah</span>
+      <span class="tag">#bisnisAnakMuda</span>
+    </div>
+  </div>
+
+  <!-- Order -->
+  <div class="order-section">
+    <h2>🛒 Pesan Logo Sekarang!</h2>
+    <p>Mau logo keren buat bisnismu? Yuk order sekarang!<br>Rp15.000 aja udah dapet logo profesional.</p>
+    <p style="color:var(--text);font-size:.9rem;margin-bottom:.5rem;">📱 Hubungi Aqil langsung:</p>
+    <a class="order-btn" href="#" onclick="alert('Aqil — masukkan nomor WhatsApp kamu ya biar tombol ini bisa dipake! Chat Jarvis buat update 😄')">📩 Pesan via WhatsApp</a>
+    <p style="margin-top:.8rem;font-size:.85rem;color:var(--meta);">Atau DM Instagram: @[isi_instagram_aqil]</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    Dibuat dengan ❤️ oleh Aqil | <a href="https://sarinursita.github.io/cerivitas-businesskids/">Business Ideas — Cerivitas</a>
+  </div>
+
+</div>
+
+<script>
+function slideTo(idx) {
+  const ss = document.getElementById('gallery');
+  const imgs = ss.querySelectorAll('img');
+  const dots = ss.querySelectorAll('.dot');
+  const counter = ss.querySelector('.counter');
+  imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
+  dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  if (counter) counter.textContent = (idx+1) + '/' + imgs.length;
+}
+function slideNext() {
+  const ss = document.getElementById('gallery');
+  const active = ss.querySelector('img.active');
+  const idx = parseInt(active.dataset.index);
+  const next = (idx + 1) % ss.querySelectorAll('img').length;
+  slideTo(next);
+}
+function slidePrev() {
+  const ss = document.getElementById('gallery');
+  const active = ss.querySelector('img.active');
+  const idx = parseInt(active.dataset.index);
+  const imgs = ss.querySelectorAll('img');
+  const prev = (idx - 1 + imgs.length) % imgs.length;
+  slideTo(prev);
+}
+</script>
+
+</body>
+</html>
