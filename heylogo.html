@@ -205,6 +205,78 @@ body {
   .hero h1 { font-size:2rem; }
   .info-grid { grid-template-columns:1fr; }
 }
+
+/* Steps */
+.steps-section { margin-bottom:2.5rem; }
+.steps-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.steps { display:flex; flex-direction:column; gap:.8rem; }
+.step {
+  display:flex; align-items:center; gap:1rem;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:14px; padding:1rem 1.2rem;
+}
+.step-num {
+  width:36px; height:36px; border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff; font-weight:800; font-size:1rem;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.step-content strong { display:block; margin-bottom:.15rem; }
+.step-content p { font-size:.9rem; color:var(--meta); }
+
+/* Package */
+.package-section { margin-bottom:2.5rem; }
+.package-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.package-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:.7rem;
+}
+.package-item {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:.8rem 1rem;
+  display:flex; align-items:center; gap:.6rem;
+  font-size:.9rem;
+}
+.pkg-icon { font-size:1.1rem; flex-shrink:0; }
+
+/* Testimoni */
+.testi-section { margin-bottom:2.5rem; }
+.testi-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.testi-grid { display:grid; grid-template-columns:1fr; gap:.8rem; }
+.testi-card {
+  background:#fff; border:1px solid var(--border);
+  border-radius:14px; padding:1.2rem;
+  border-left:4px solid var(--accent);
+}
+.testi-text { font-size:.95rem; line-height:1.6; margin-bottom:.5rem; font-style:italic; color:var(--text); }
+.testi-name { font-size:.85rem; color:var(--meta); text-align:right; }
+
+/* FAQ */
+.faq-section { margin-bottom:2.5rem; }
+.faq-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.faq-item {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; margin-bottom:.5rem; overflow:hidden;
+}
+.faq-q {
+  padding:1rem 1.2rem; cursor:pointer; font-weight:600;
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:.95rem; user-select:none;
+}
+.faq-q:hover { background:rgba(244,143,177,.05); }
+.faq-toggle { font-size:1.3rem; font-weight:700; color:var(--accent); transition:transform .3s; }
+.faq-q.open .faq-toggle { transform:rotate(45deg); }
+.faq-a {
+  max-height:0; overflow:hidden; transition:max-height .3s ease, padding .3s ease;
+  padding:0 1.2rem; font-size:.9rem; line-height:1.6; color:var(--meta);
+}
+.faq-q.open + .faq-a {
+  max-height:200px; padding:0 1.2rem 1rem 1.2rem;
+}
+
+@media(max-width:600px) {
+  .package-grid { grid-template-columns:1fr; }
+}
 </style>
 </head>
 <body>
@@ -267,6 +339,112 @@ body {
     <p>Desain elegan dan simple • Harga terjangkau untuk UMKM • Cocok buat branding usaha • Desain 100% custom sesuai request</p>
   </div>
 
+  <!-- Cara Pesan -->
+  <div class="steps-section">
+    <h2>📝 Cara Pesan</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <strong>Chat Aqil</strong>
+          <p>Hubungi lewat WhatsApp atau DM Instagram, bilang mau bikin logo</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <strong>Kasih Konsep</strong>
+          <p>Ceritain usaha kamu, warna favorit, gaya desain yang diinginkan</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <strong>Didesain</strong>
+          <p>Aqil bikin logo sesuai konsep kamu — desain elegan & simple ✨</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <strong>Selesai! 🎉</strong>
+          <p>Dapet file logo siap pakai, tinggal dipasang di bisnismu!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Paket -->
+  <div class="package-section">
+    <h2>📦 Yang Kamu Dapat</h2>
+    <div class="package-grid">
+      <div class="package-item">
+        <span class="pkg-icon">✅</span>
+        <span>Desain 100% custom sesuai request</span>
+      </div>
+      <div class="package-item">
+        <span class="pkg-icon">✅</span>
+        <span>Format PNG resolusi tinggi</span>
+      </div>
+      <div class="package-item">
+        <span class="pkg-icon">✅</span>
+        <span>3x revisi — bebas minta perubahan</span>
+      </div>
+      <div class="package-item">
+        <span class="pkg-icon">✅</span>
+        <span>Cocok buat logo IG, WA, toko online</span>
+      </div>
+      <div class="package-item">
+        <span class="pkg-icon">✅</span>
+        <span>Harga Rp15.000 — affordable banget!</span>
+      </div>
+      <div class="package-item">
+        <span class="pkg-icon">✅</span>
+        <span>Pengerjaan cepat — ga pake lama</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimoni -->
+  <div class="testi-section">
+    <h2>💬 Kata Mereka</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-text">"Logonya keren banget! Simple tapi elegan. Langsung kepake buat profil IG toko aku. Makasih Hey!Logo!"</p>
+        <p class="testi-name">— Dina, Pemilik @dinaricebowl</p>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">"Buat logo stand kecil aku, harganya pas di kantong. Yang punya ramah, desainnya cepet jadi. Recommended!"</p>
+        <p class="testi-name">— Pak Rudi, Pemilik Kedai Kopi</p>
+      </div>
+      <div class="testi-card">
+        <p class="testi-text">"Aku butuh logo buat jualan online, Aqil bantuin dari awal sampe jadi. Hasilnya lucu dan aesthetic 🥰"</p>
+        <p class="testi-name">— Maya, Online Shop Owner</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>❓ FAQ — Pertanyaan Umum</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Berapa lama proses desainnya? <span class="faq-toggle">+</span></div>
+      <div class="faq-a">Biasanya 1-3 hari tergantung kompleksitas desain. Tapi kalo lagi senggang, bisa lebih cepet! 🚀</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Bisa revisi berapa kali? <span class="faq-toggle">+</span></div>
+      <div class="faq-a">3x revisi — kamu bebas minta perubahan warna, font, tata letak sampe pas! 👍</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Dapet file apa aja? <span class="faq-toggle">+</span></div>
+      <div class="faq-a">Dapet file PNG resolusi tinggi. Enggak perlu ribet, tinggal dipake buat profil toko, Instagram, WA, atau cetak banner! 📱</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Bayarnya gimana? <span class="faq-toggle">+</span></div>
+      <div class="faq-a">Transfer ke rekening atau via QRIS. Dibayar setelah desain jadi dan kamu setuju — aman! 🔒</div>
+    </div>
+  </div>
+
   <!-- Tags -->
   <div class="tags-section">
     <h2>🏷️ Tags</h2>
@@ -321,6 +499,9 @@ function slidePrev() {
   const imgs = ss.querySelectorAll('img');
   const prev = (idx - 1 + imgs.length) % imgs.length;
   slideTo(prev);
+}
+function toggleFaq(el) {
+  el.classList.toggle('open');
 }
 </script>
 
