@@ -274,42 +274,80 @@ body {
   max-height:200px; padding:0 1.2rem 1rem 1.2rem;
 }
 
+/* Usage */
+.usage-section { margin-bottom:2.5rem; }
+.usage-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.usage-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem;
+}
+.usage-item {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:14px; padding:1rem; text-align:center;
+}
+.usage-icon { font-size:1.8rem; display:block; margin-bottom:.3rem; }
+.usage-item strong { display:block; font-size:.95rem; margin-bottom:.2rem; }
+.usage-item p { font-size:.8rem; color:var(--meta); line-height:1.3; }
+
 @media(max-width:600px) {
   .package-grid { grid-template-columns:1fr; }
+  .usage-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+/* Promo */
+.promo-section { margin-bottom:2.5rem; }
+.promo-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.promo-content {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:.8rem;
+}
+.promo-item {
+  background:linear-gradient(135deg,#fef3c7,#fde68a);
+  border:1px solid #fbbf24; border-radius:16px;
+  padding:1.2rem; display:flex; align-items:center; gap:1rem;
+}
+.promo-icon { font-size:2rem; }
+.promo-item strong { font-size:1rem; display:block; margin-bottom:.15rem; }
+.promo-item p { font-size:.85rem; color:var(--meta); }
+
+@media(max-width:520px) {
+  .promo-content { grid-template-columns:1fr; }
 }
 
 /* Pricing */
 .pricing-section { margin-bottom:2.5rem; }
 .pricing-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
 .pricing-grid {
-  display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:.8rem;
 }
 .pricing-card {
   background:var(--card); border:1px solid var(--border);
   border-radius:16px; padding:1.2rem;
   position:relative; display:flex; flex-direction:column;
 }
-.pricing-featured {
-  background:linear-gradient(135deg,#fff0f5,#f3e8ff);
-  border:2px solid var(--accent); transform:scale(1.03);
-  box-shadow:0 6px 20px rgba(244,143,177,.2);
+.pricing-premium {
+  background:linear-gradient(135deg,#fef3c7,#fde68a);
+  border:2px solid #f59e0b; box-shadow:0 6px 20px rgba(245,158,11,.2);
+}
+.pricing-premium .pricing-badge {
+  background:linear-gradient(135deg,#f59e0b,#d97706);
 }
 .pricing-badge {
   font-size:.65rem; font-weight:700; text-transform:uppercase;
-  background:var(--accent); color:#fff; padding:2px 8px;
+  color:#fff; padding:2px 8px;
   border-radius:8px; display:inline-block; margin-bottom:.5rem;
   letter-spacing:.5px;
+  background:var(--accent);
 }
-.pricing-featured .pricing-badge { background:linear-gradient(135deg,var(--accent),var(--btn-hover)); }
 .pricing-card h3 { font-size:1.1rem; margin-bottom:.2rem; }
 .pricing-price { font-size:1.5rem; font-weight:800; color:var(--accent); margin-bottom:.3rem; }
 .pricing-desc { font-size:.8rem; color:var(--meta); margin-bottom:.8rem; line-height:1.4; }
 .pricing-features { list-style:none; padding:0; margin:0; }
 .pricing-features li { font-size:.85rem; padding:.2rem 0; color:var(--text); }
 
-@media(max-width:720px) {
+@media(max-width:820px) {
+  .pricing-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:520px) {
   .pricing-grid { grid-template-columns:1fr; }
-  .pricing-featured { transform:none; }
 }
 </style>
 </head>
@@ -351,8 +389,8 @@ body {
   <div class="info-grid">
     <div class="info-card">
       <div class="icon">🎯</div>
-      <div class="label">Target</div>
-      <div class="value">UMKM & pemilik usaha kecil</div>
+      <div class="label">Cocok untuk</div>
+      <div class="value">UMKM, komunitas, angkatan, partai, team esport, lembaga, dan lainnya!</div>
     </div>
     <div class="info-card">
       <div class="icon">⏱️</div>
@@ -377,7 +415,7 @@ body {
           <li>✅ Pengerjaan 1-2 hari</li>
         </ul>
       </div>
-      <div class="pricing-card pricing-featured">
+      <div class="pricing-card">
         <div class="pricing-badge">⭐ BEST</div>
         <h3>Pro</h3>
         <div class="pricing-price">Rp25.000</div>
@@ -401,13 +439,25 @@ body {
           <li>✅ Bonus template IG Story & Feed</li>
         </ul>
       </div>
+      <div class="pricing-card pricing-premium">
+        <div class="pricing-badge">👑 PREMIUM</div>
+        <h3>Custom</h3>
+        <div class="pricing-price">Nego</div>
+        <p class="pricing-desc">Untuk pesanan khusus & penting — harga menyesuaikan</p>
+        <ul class="pricing-features">
+          <li>✅ Desain kompleks (partai, esport, lembaga, dll)</li>
+          <li>✅ Revisi unlimited</li>
+          <li>✅ File lengkap (PNG + JPG + Vector + PDF)</li>
+          <li>✅ Konsultasi desain intensive</li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <!-- Description -->
   <div class="desc-section">
     <h2>📋 Tentang Hey!Logo</h2>
-    <p>Hey!Logo adalah jasa desain logo custom yang dibuat khusus untuk UMKM dan pemilik usaha kecil. Setiap logo didesain dengan gaya elegan dan simple, cocok buat branding usaha kamu yang ingin naik level! Dengan harga yang terjangkau, kamu bisa punya logo profesional tanpa harus keluar biaya besar.</p>
+    <p>Hey!Logo adalah jasa desain logo custom yang bisa dipake buat apa aja! Mau logo UMKM, logo angkatan sekolah, logo partai, logo team esport game, logo lembaga, atau logo komunitas — semua bisa! Setiap logo didesain dengan gaya elegan dan simple, cocok buat branding kamu yang ingin naik level! Dengan harga yang terjangkau, kamu bisa punya logo profesional tanpa harus keluar biaya besar.</p>
   </div>
 
   <!-- USP -->
@@ -482,6 +532,64 @@ body {
     </div>
   </div>
 
+  <!-- Logo Bisa Buat Apa Aja -->
+  <div class="usage-section">
+    <h2>🎯 Logo Bisa Buat Apa Aja?</h2>
+    <div class="usage-grid">
+      <div class="usage-item">
+        <span class="usage-icon">🏪</span>
+        <strong>UMKM & Toko</strong>
+        <p>Logo toko, kafe, online shop, brand kecil</p>
+      </div>
+      <div class="usage-item">
+        <span class="usage-icon">🎓</span>
+        <strong>Angkatan</strong>
+        <p>Logo angkatan sekolah, kampus, organisasi</p>
+      </div>
+      <div class="usage-item">
+        <span class="usage-icon">🏛️</span>
+        <strong>Partai & Lembaga</strong>
+        <p>Logo partai politik, yayasan, komunitas</p>
+      </div>
+      <div class="usage-item">
+        <span class="usage-icon">🎮</span>
+        <strong>Team Esport & Game</strong>
+        <p>Logo clan, tim tournament, guild game</p>
+      </div>
+      <div class="usage-item">
+        <span class="usage-icon">👥</span>
+        <strong>Komunitas</strong>
+        <p>Logo grup, perkumpulan, fans club</p>
+      </div>
+      <div class="usage-item">
+        <span class="usage-icon">📅</span>
+        <strong>Acara & Event</strong>
+        <p>Logo pensi, lomba, seminar, gathering</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo -->
+  <div class="promo-section">
+    <h2>🔥 Promo Spesial</h2>
+    <div class="promo-content">
+      <div class="promo-item">
+        <span class="promo-icon">📆</span>
+        <div>
+          <strong>Akhir Bulan</strong>
+          <p>Diskon spesial tiap akhir bulan — pantau terus!</p>
+        </div>
+      </div>
+      <div class="promo-item">
+        <span class="promo-icon">🎊</span>
+        <div>
+          <strong>Hari Raya</strong>
+          <p>Promo pas hari raya, diskon tamabahan buat kamu!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Testimoni -->
   <div class="testi-section">
     <h2>💬 Kata Mereka</h2>
@@ -539,9 +647,9 @@ body {
   <!-- Order -->
   <div class="order-section">
     <h2>🛒 Pesan Logo Sekarang!</h2>
-    <p>Pilih paket yang cocok buat bisnismu!<br>Dari Basic (Rp15.000) sampe Complete (Rp35.000) — semua bisa custom!</p>
-    <p style="color:var(--text);font-size:.9rem;margin-bottom:.5rem;">📱 Hubungi Aqil langsung:</p>
-    <a class="order-btn" href="#" onclick="alert('Aqil — kirim nomor WA kamu ke Jarvis ya biar tombol ini bisa dipake! 😄')">📩 Pesan via WhatsApp</a>
+    <p>Pilih paket yang cocok buatmu! Dari Basic (Rp15.000) sampe Custom (nego).<br>Buat logo UMKM, angkatan, esport, partai, atau apapun — semua bisa!</p>
+    <p style="color:var(--text);font-size:.9rem;margin-bottom:.5rem;">📱 Langsung chat Aqil aja:</p>
+    <a class="order-btn" href="https://wa.me/6285743848400" target="_blank">📩 Pesan via WhatsApp</a>
     <p style="margin-top:.8rem;font-size:.85rem;color:var(--meta);">Atau DM Instagram: @[isi_instagram_aqil]</p>
   </div>
 
