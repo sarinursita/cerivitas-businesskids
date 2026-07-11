@@ -277,6 +277,40 @@ body {
 @media(max-width:600px) {
   .package-grid { grid-template-columns:1fr; }
 }
+
+/* Pricing */
+.pricing-section { margin-bottom:2.5rem; }
+.pricing-section h2 { font-size:1.3rem; margin-bottom:1.2rem; }
+.pricing-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:.8rem;
+}
+.pricing-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:1.2rem;
+  position:relative; display:flex; flex-direction:column;
+}
+.pricing-featured {
+  background:linear-gradient(135deg,#fff0f5,#f3e8ff);
+  border:2px solid var(--accent); transform:scale(1.03);
+  box-shadow:0 6px 20px rgba(244,143,177,.2);
+}
+.pricing-badge {
+  font-size:.65rem; font-weight:700; text-transform:uppercase;
+  background:var(--accent); color:#fff; padding:2px 8px;
+  border-radius:8px; display:inline-block; margin-bottom:.5rem;
+  letter-spacing:.5px;
+}
+.pricing-featured .pricing-badge { background:linear-gradient(135deg,var(--accent),var(--btn-hover)); }
+.pricing-card h3 { font-size:1.1rem; margin-bottom:.2rem; }
+.pricing-price { font-size:1.5rem; font-weight:800; color:var(--accent); margin-bottom:.3rem; }
+.pricing-desc { font-size:.8rem; color:var(--meta); margin-bottom:.8rem; line-height:1.4; }
+.pricing-features { list-style:none; padding:0; margin:0; }
+.pricing-features li { font-size:.85rem; padding:.2rem 0; color:var(--text); }
+
+@media(max-width:720px) {
+  .pricing-grid { grid-template-columns:1fr; }
+  .pricing-featured { transform:none; }
+}
 </style>
 </head>
 <body>
@@ -316,14 +350,57 @@ body {
   <!-- Info Grid -->
   <div class="info-grid">
     <div class="info-card">
-      <div class="icon">💰</div>
-      <div class="label">Harga</div>
-      <div class="value">Rp15.000/logo</div>
-    </div>
-    <div class="info-card">
       <div class="icon">🎯</div>
       <div class="label">Target</div>
       <div class="value">UMKM & pemilik usaha kecil</div>
+    </div>
+    <div class="info-card">
+      <div class="icon">⏱️</div>
+      <div class="label">Pengerjaan</div>
+      <div class="value">1-3 hari</div>
+    </div>
+  </div>
+
+  <!-- Pilih Paket Logo -->
+  <div class="pricing-section">
+    <h2>🏆 Pilih Paket Logo</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-badge">POPULER</div>
+        <h3>Basic</h3>
+        <div class="pricing-price">Rp15.000</div>
+        <p class="pricing-desc">Cocok buat yang butuh logo simple & cepet jadi</p>
+        <ul class="pricing-features">
+          <li>✅ 1 konsep desain</li>
+          <li>✅ 2x revisi</li>
+          <li>✅ File PNG</li>
+          <li>✅ Pengerjaan 1-2 hari</li>
+        </ul>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">⭐ BEST</div>
+        <h3>Pro</h3>
+        <div class="pricing-price">Rp25.000</div>
+        <p class="pricing-desc">Lebih detail & fleksibel buat branding kamu</p>
+        <ul class="pricing-features">
+          <li>✅ 2 konsep desain (pilih yang paling oke)</li>
+          <li>✅ 3x revisi</li>
+          <li>✅ File PNG + JPG</li>
+          <li>✅ Bonus alternatif warna</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-badge">HEMAT</div>
+        <h3>Complete</h3>
+        <div class="pricing-price">Rp35.000</div>
+        <p class="pricing-desc">Logo + template sosmed siap pakai</p>
+        <ul class="pricing-features">
+          <li>✅ 3 konsep desain</li>
+          <li>✅ Revisi unlimited</li>
+          <li>✅ File PNG + JPG + Vector</li>
+          <li>✅ Bonus template IG Story & Feed</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -462,9 +539,9 @@ body {
   <!-- Order -->
   <div class="order-section">
     <h2>🛒 Pesan Logo Sekarang!</h2>
-    <p>Mau logo keren buat bisnismu? Yuk order sekarang!<br>Rp15.000 aja udah dapet logo profesional.</p>
+    <p>Pilih paket yang cocok buat bisnismu!<br>Dari Basic (Rp15.000) sampe Complete (Rp35.000) — semua bisa custom!</p>
     <p style="color:var(--text);font-size:.9rem;margin-bottom:.5rem;">📱 Hubungi Aqil langsung:</p>
-    <a class="order-btn" href="#" onclick="alert('Aqil — masukkan nomor WhatsApp kamu ya biar tombol ini bisa dipake! Chat Jarvis buat update 😄')">📩 Pesan via WhatsApp</a>
+    <a class="order-btn" href="#" onclick="alert('Aqil — kirim nomor WA kamu ke Jarvis ya biar tombol ini bisa dipake! 😄')">📩 Pesan via WhatsApp</a>
     <p style="margin-top:.8rem;font-size:.85rem;color:var(--meta);">Atau DM Instagram: @[isi_instagram_aqil]</p>
   </div>
 
