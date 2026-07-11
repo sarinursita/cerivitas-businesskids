@@ -177,6 +177,14 @@ body {
   box-shadow:0 6px 20px rgba(244,143,177,.5);
 }
 
+/* Order Contact */
+.order-contact { display:flex; flex-direction:column; gap:1rem; max-width:400px; margin:0 auto; }
+.order-wa, .order-ig { background:#fff; border:1px solid var(--border); border-radius:14px; padding:1rem; display:flex; align-items:center; gap:.8rem; flex-wrap:wrap; justify-content:center; }
+.order-wa { border-color:rgba(37,211,102,.3); background:#f0fdf4; }
+.wa-label { font-size:.85rem; color:var(--meta); }
+.wa-number { font-size:1.1rem; font-weight:700; color:var(--text); letter-spacing:.5px; }
+.order-wa .order-btn { padding:.5rem 1.2rem; font-size:.85rem; }
+
 /* Footer */
 .footer {
   text-align:center; color:var(--meta);
@@ -664,9 +672,17 @@ body {
   <div class="order-section">
     <h2>🛒 Pesan Logo Sekarang!</h2>
     <p>Pilih paket yang cocok buatmu! Dari Basic (Rp15.000) sampe Custom (nego).<br>Buat logo UMKM, angkatan, esport, partai, atau apapun — semua bisa!</p>
-    <p style="color:var(--text);font-size:.9rem;margin-bottom:.5rem;">📱 Langsung chat Aqil aja:</p>
-    <a class="order-btn" href="https://wa.me/6285743848400" target="_blank">📩 Pesan via WhatsApp</a>
-    <p style="margin-top:.8rem;font-size:.85rem;color:var(--meta);">Atau DM Instagram: @[isi_instagram_aqil]</p>
+    <div class="order-contact">
+      <div class="order-wa">
+        <span class="wa-label">📱 WhatsApp</span>
+        <span class="wa-number">0857-4384-8400</span>
+        <a class="order-btn" href="https://wa.me/6285743848400" target="_blank">💬 Klik Chat</a>
+      </div>
+      <div class="order-ig">
+        <span class="wa-label">📸 Instagram</span>
+        <span class="wa-number">@[isi_instagram_aqil]</span>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
