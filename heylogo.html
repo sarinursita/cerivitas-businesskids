@@ -68,6 +68,15 @@ body {
   font-size:1.3rem; margin-bottom:1rem;
   color:var(--text);
 }
+.single-img {
+  width:100%; border-radius:18px; overflow:hidden;
+  background:#f0e4ee;
+  box-shadow:0 4px 20px rgba(100,70,120,.1);
+}
+.single-img img {
+  width:100%; height:auto; display:block; object-fit:contain;
+  background:#f0e4ee;
+}
 .slideshow {
   position:relative; width:100%;
   aspect-ratio:1/1;
@@ -381,16 +390,8 @@ body {
   <!-- Gallery -->
   <div class="gallery">
     <h2>📸 Portofolio</h2>
-    <div class="slideshow" id="gallery">
-      <img src="images/heylogo-promo-1.png" class="active" data-index="0" alt="Promo 1">
-      <img src="images/heylogo-before-after-1.png" data-index="1" alt="Before After 1">
-      <button class="nav prev" onclick="slidePrev()">‹</button>
-      <button class="nav next" onclick="slideNext()">›</button>
-      <div class="dots">
-        <span class="dot active" onclick="slideTo(0)"></span>
-        <span class="dot" onclick="slideTo(1)"></span>
-      </div>
-      <span class="counter">1/2</span>
+    <div class="single-img">
+      <img src="images/heylogo-promo-1.png" alt="Promo Hey!Logo">
     </div>
   </div>
 
